@@ -1,0 +1,7 @@
+[Unit]
+Description=Use Sox to play white noise to help me sleep
+Wants=soxstartrek.timer
+
+[Service]
+User=minix
+ExecStart=/usr/bin/play -c2 -n synth 8:0:0 whitenoise band -n 100 24 band -n 300 100 gain +20
