@@ -1,11 +1,11 @@
 [Unit]
 Description=Make white noise for sleep
 Requires=soxstartrek.service
+After=time-sync.target 
 
 [Timer]
-OnCalendar=Sun..Thu 22:00
+OnCalendar=Sun,Mon..Thu 22:00
 OnCalendar=Fri..Sat 23:00
-Persistent=true
 
 [Install]
 WantedBy=timers.target
